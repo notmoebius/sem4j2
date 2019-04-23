@@ -9,9 +9,10 @@ CREATE TABLE `news` (
 );
 
 CREATE TABLE `comments` (
-  `pin_id` INTEGER,
+  `comment_id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `news_id` INTEGER,
   `user_id` INTEGER,
-  `comment` TEXT, 
-  FOREIGN KEY (pin_id) REFERENCES pins(pin_id),
+  `body_comment` TEXT, 
+  FOREIGN KEY (news_id) REFERENCES pins(news_id),
   FOREIGN KEY (user_id) REFERENCES category(user_id)
 );
