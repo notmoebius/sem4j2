@@ -13,6 +13,6 @@ CREATE TABLE `comments` (
   `news_id` INTEGER,
   `user_id` INTEGER,
   `body_comment` TEXT, 
-  FOREIGN KEY (news_id) REFERENCES pins(news_id),
-  FOREIGN KEY (user_id) REFERENCES category(user_id)
+  FOREIGN KEY (news_id) REFERENCES news(news_id),
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
 );

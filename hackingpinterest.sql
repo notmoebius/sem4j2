@@ -13,5 +13,5 @@ CREATE TABLE `comments` (
   `user_id` INTEGER,
   `comment` TEXT, 
   FOREIGN KEY (pin_id) REFERENCES pins(pin_id),
-  FOREIGN KEY (user_id) REFERENCES category(user_id)
+  FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
